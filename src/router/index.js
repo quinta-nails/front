@@ -1,10 +1,15 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import Reserve from '../components/ReservePage.vue';
+import NotFound from '../components/NotFound.vue';
 
 const routes = [
   {
     path: '/reserve',
     component: Reserve,
+  },
+  {
+    path: '/:pathMatch(.*)*',
+    component: NotFound,
   },
 ];
 
